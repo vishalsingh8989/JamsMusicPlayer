@@ -50,11 +50,11 @@ import android.view.ViewTreeObserver.OnGlobalLayoutListener;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import com.google.analytics.tracking.android.EasyTracker;
-import com.google.analytics.tracking.android.Fields;
-import com.google.analytics.tracking.android.MapBuilder;
-import com.google.android.gms.common.GooglePlayServicesUtil;
+//
+//import com.google.analytics.tracking.android.EasyTracker;
+//import com.google.analytics.tracking.android.Fields;
+//import com.google.analytics.tracking.android.MapBuilder;
+//import com.google.android.gms.common.GooglePlayServicesUtil;
 import com.jams.music.player.R;
 import com.jams.music.player.Helpers.TypefaceHelper;
 import com.jams.music.player.InAppBilling.IabHelper;
@@ -258,20 +258,20 @@ public class LauncherActivity extends FragmentActivity {
 		}
 
 		//Fire away a report to Google Analytics.
-		try {
-			if (mApp.isGoogleAnalyticsEnabled()==true) {
-				EasyTracker easyTracker = EasyTracker.getInstance(this);
-		    	easyTracker.send(MapBuilder.createEvent("Jams startup.",     // Event category (required)
-			                   						  	"User started Jams.",  // Event action (required)
-			                   						  	"User started Jams.",   // Event label
-			                   						  	null)            // Event value
-						   .build());
-			}
-
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		
+//		try {
+//			if (mApp.isGoogleAnalyticsEnabled()==true) {
+//				EasyTracker easyTracker = EasyTracker.getInstance(this);
+//		    	easyTracker.send(MapBuilder.createEvent("Jams startup.",     // Event category (required)
+//			                   						  	"User started Jams.",  // Event action (required)
+//			                   						  	"User started Jams.",   // Event label
+//			                   						  	null)            // Event value
+//						   .build());
+//			}
+//
+//		} catch (Exception e) {
+//			e.printStackTrace();
+//		}
+//
 	}
 	
 	private int[] getTrueDeviceResolution() {
@@ -697,11 +697,11 @@ public class LauncherActivity extends FragmentActivity {
         	
             @Override
             public void run() {
-              Dialog d = GooglePlayServicesUtil.getErrorDialog(
-		                 code,
-		                 LauncherActivity.this,
-		                 REQUEST_CODE_RECOVER_FROM_PLAY_SERVICES_ERROR);
-              d.show();
+//              Dialog d = GooglePlayServicesUtil.getErrorDialog(
+//		                 code,
+//		                 LauncherActivity.this,
+//		                 REQUEST_CODE_RECOVER_FROM_PLAY_SERVICES_ERROR);
+//              d.show();
             }
             
         });
@@ -711,38 +711,38 @@ public class LauncherActivity extends FragmentActivity {
 	/** Given a URI, returns a map of campaign data that can be sent with
 	 * any GA hit.
 	 *
-	 * @param uri A hierarchical URI that may or may not have campaign data
+	 //* @param uri A hierarchical URI that may or may not have campaign data
 	 *     stored in query parameters.
 	 *
 	 * @return A map that may contain campaign or referrer
 	 *     that may be sent with any Google Analytics hit.
    	 */
-	private Map<String,String> getReferrerMapFromUri(Uri uri) {
-		 MapBuilder paramMap = new MapBuilder();
-
-		 //If no URI, return an empty Map.
-		 if (uri==null) { 
-			 return paramMap.build(); 
-		 }
-
-		 /* Source is the only required campaign field. No need to continue if not
-		  * present. */
-		 if (uri.getQueryParameter(CAMPAIGN_SOURCE_PARAM)!=null) {
-
-			 /* MapBuilder.setCampaignParamsFromUrl parses Google Analytics campaign
-			  * ("UTM") parameters from a string URL into a Map that can be set on
-			  * the Tracker. */
-			 paramMap.setCampaignParamsFromUrl(uri.toString());
-
-			 /* If no source parameter, set authority to source and medium to
-			  * "referral". */
-		 } else if (uri.getAuthority()!=null) {
-			 paramMap.set(Fields.CAMPAIGN_MEDIUM, "referral");
-			 paramMap.set(Fields.CAMPAIGN_SOURCE, uri.getAuthority());
-		 }
-
-		 return paramMap.build();
-	}
+//	private Map<String,String> getReferrerMapFromUri(Uri uri) {
+//		 MapBuilder paramMap = new MapBuilder();
+//
+//		 //If no URI, return an empty Map.
+//		 if (uri==null) {
+//			 return paramMap.build();
+//		 }
+//
+//		 /* Source is the only required campaign field. No need to continue if not
+//		  * present. */
+//		 if (uri.getQueryParameter(CAMPAIGN_SOURCE_PARAM)!=null) {
+//
+//			 /* MapBuilder.setCampaignParamsFromUrl parses Google Analytics campaign
+//			  * ("UTM") parameters from a string URL into a Map that can be set on
+//			  * the Tracker. */
+//			 paramMap.setCampaignParamsFromUrl(uri.toString());
+//
+//			 /* If no source parameter, set authority to source and medium to
+//			  * "referral". */
+//		 } else if (uri.getAuthority()!=null) {
+//			 paramMap.set(Fields.CAMPAIGN_MEDIUM, "referral");
+//			 paramMap.set(Fields.CAMPAIGN_SOURCE, uri.getAuthority());
+//		 }
+//
+//		 return paramMap.build();
+//	}
 
 	@Override
 	public void onPause() {
@@ -781,21 +781,21 @@ public class LauncherActivity extends FragmentActivity {
 	public void onStart() {
 		super.onStart();
 		//GAnalytics.
-		try {
-			if (mApp.isGoogleAnalyticsEnabled()==true) {
-				EasyTracker.getInstance(this).activityStart(this);
-				
-				//Get the intent that started this Activity.
-			    Intent intent = this.getIntent();
-			    Uri uri = intent.getData();
-
-			    //Send a screenview using any available campaign or referrer data.
-			    MapBuilder.createAppView().setAll(getReferrerMapFromUri(uri));
-			}
-
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+//		try {
+//			if (mApp.isGoogleAnalyticsEnabled()==true) {
+//				EasyTracker.getInstance(this).activityStart(this);
+//
+//				//Get the intent that started this Activity.
+//			    Intent intent = this.getIntent();
+//			    Uri uri = intent.getData();
+//
+//			    //Send a screenview using any available campaign or referrer data.
+//			    MapBuilder.createAppView().setAll(getReferrerMapFromUri(uri));
+//			}
+//
+//		} catch (Exception e) {
+//			e.printStackTrace();
+//		}
 	    
 	}
 
@@ -803,14 +803,14 @@ public class LauncherActivity extends FragmentActivity {
 	public void onStop() {
 		super.onStop();
 		//GAnalytics.
-		try {
-			if (mApp.isGoogleAnalyticsEnabled()==true) {
-				EasyTracker.getInstance(this).activityStop(this);
-			}
-			
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+//		try {
+//			if (mApp.isGoogleAnalyticsEnabled()==true) {
+//				EasyTracker.getInstance(this).activityStop(this);
+//			}
+//
+//		} catch (Exception e) {
+//			e.printStackTrace();
+//		}
 		
 	}
 	

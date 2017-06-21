@@ -24,11 +24,11 @@ import android.os.AsyncTask;
 import android.support.v4.app.FragmentActivity;
 import android.widget.Toast;
 
-import com.google.android.gms.auth.GoogleAuthException;
-import com.google.android.gms.auth.GoogleAuthUtil;
-import com.google.android.gms.auth.GooglePlayServicesAvailabilityException;
-import com.google.android.gms.auth.UserRecoverableAuthException;
-import com.google.android.gms.common.GooglePlayServicesUtil;
+//import com.google.android.gms.auth.GoogleAuthException;
+//import com.google.android.gms.auth.GoogleAuthUtil;
+//import com.google.android.gms.auth.GooglePlayServicesAvailabilityException;
+//import com.google.android.gms.auth.UserRecoverableAuthException;
+//import com.google.android.gms.common.GooglePlayServicesUtil;
 import com.jams.music.player.R;
 import com.jams.music.player.GMusicHelpers.GMusicClientCalls;
 import com.jams.music.player.LauncherActivity.LauncherActivity;
@@ -98,24 +98,24 @@ public class AsyncGoogleMusicAuthenticationTask extends AsyncTask<String, String
 	@Override
     protected String doInBackground(String... params) {
 
-		try {
-			authToken = GoogleAuthUtil.getToken(mContext, mAccountName, "sj");
-		} catch (GooglePlayServicesAvailabilityException e) {
-			e.printStackTrace();
-			availabilityExceptionStatusCode = e.getConnectionStatusCode();
-			return "GOOGLE_PLAY_SERVICES_AVAILABILITY_EXCEPTION";
-		} catch (UserRecoverableAuthException e) {
-			e.printStackTrace();
-			userRecoverableExceptionIntent = e.getIntent();
-			return "USER_RECOVERABLE_AUTH_EXCEPTION";
-		} catch (GoogleAuthException e) {
-			e.printStackTrace();
-			return "GOOGLE_AUTH_EXCEPTION";
-		} catch (Exception e) {
-			e.printStackTrace();
-			return "GENERIC_EXCEPTION";
-		}
-		
+//		try {
+//			authToken = GoogleAuthUtil.getToken(mContext, mAccountName, "sj");
+//		} catch (GooglePlayServicesAvailabilityException e) {
+//			e.printStackTrace();
+//			availabilityExceptionStatusCode = e.getConnectionStatusCode();
+//			return "GOOGLE_PLAY_SERVICES_AVAILABILITY_EXCEPTION";
+//		} catch (UserRecoverableAuthException e) {
+//			e.printStackTrace();
+//			userRecoverableExceptionIntent = e.getIntent();
+//			return "USER_RECOVERABLE_AUTH_EXCEPTION";
+//		} catch (GoogleAuthException e) {
+//			e.printStackTrace();
+//			return "GOOGLE_AUTH_EXCEPTION";
+//		} catch (Exception e) {
+//			e.printStackTrace();
+//			return "GENERIC_EXCEPTION";
+//		}
+//
 		if (mFirstRun) {
 			publishProgress(mContext.getResources().getString(R.string.signing_in_to_google_play_music));
 		}
@@ -150,10 +150,10 @@ public class AsyncGoogleMusicAuthenticationTask extends AsyncTask<String, String
     	
     	//Perform an action based on the operation's result code.
     	if (result.equals("GOOGLE_PLAY_SERVICES_AVAILABILITY_EXCEPTION")) {
-    		Dialog d = GooglePlayServicesUtil.getErrorDialog(availabilityExceptionStatusCode,
-					 mActivity,
-					 REQUEST_CODE_RECOVER_FROM_PLAY_SERVICES_ERROR);
-    		d.show();
+//    		Dialog d = GooglePlayServicesUtil.getErrorDialog(availabilityExceptionStatusCode,
+//					 mActivity,
+//					 REQUEST_CODE_RECOVER_FROM_PLAY_SERVICES_ERROR);
+//    		d.show();
     	
     	} else if (result.equals("USER_RECOVERABLE_AUTH_EXCEPTION")) {
     		//45 is an arbitrary value that identifies this activity's result.

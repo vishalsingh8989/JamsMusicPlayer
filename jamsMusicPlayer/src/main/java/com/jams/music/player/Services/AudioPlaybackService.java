@@ -50,10 +50,10 @@ import android.view.View;
 import android.widget.RemoteViews;
 import android.widget.Toast;
 
-import com.google.analytics.tracking.android.Fields;
-import com.google.analytics.tracking.android.GoogleAnalytics;
-import com.google.analytics.tracking.android.MapBuilder;
-import com.google.analytics.tracking.android.Tracker;
+//import com.google.analytics.tracking.android.Fields;
+//import com.google.analytics.tracking.android.GoogleAnalytics;
+//import com.google.analytics.tracking.android.MapBuilder;
+//import com.google.analytics.tracking.android.Tracker;
 import com.jams.music.player.AsyncTasks.AsyncGetSongStreamURLTask;
 import com.jams.music.player.BroadcastReceivers.HeadsetButtonsReceiver;
 import com.jams.music.player.BroadcastReceivers.HeadsetPlugBroadcastReceiver;
@@ -177,8 +177,8 @@ public class AudioPlaybackService extends Service {
 	public static final Uri URI_BEING_LOADED = Uri.parse("uri_being_loaded");
 	
 	//Google Analytics.
-	private GoogleAnalytics mGAInstance;
-	private Tracker mTracker;
+//	private GoogleAnalytics mGAInstance;
+//	private Tracker mTracker;
 	private long mServiceStartTime;
 	
 	/**
@@ -289,14 +289,14 @@ public class AudioPlaybackService extends Service {
         		String gaTrackingId = getResources().getString(R.string.ga_trackingId);
             	mServiceStartTime = System.currentTimeMillis();
             	
-            	mGAInstance = GoogleAnalytics.getInstance(getApplicationContext());
-                mTracker = mGAInstance.getTracker(gaTrackingId);
-                
-                mTracker.set(Fields.SESSION_CONTROL, "start");
-                mTracker.send(MapBuilder.createEvent("Jams Service", 
-    					 							 "Service started!", 
-    					 							 "User is playing music.", 
-    					 							 null).build());
+//            	mGAInstance = GoogleAnalytics.getInstance(getApplicationContext());
+//                mTracker = mGAInstance.getTracker(gaTrackingId);
+//
+//                mTracker.set(Fields.SESSION_CONTROL, "start");
+//                mTracker.send(MapBuilder.createEvent("Jams Service",
+//    					 							 "Service started!",
+//    					 							 "User is playing music.",
+//    					 							 null).build());
         	}
 
         } catch (Exception e) {
@@ -2947,19 +2947,19 @@ public class AudioPlaybackService extends Service {
 		updateWidgets();
 		
 		//Send service stop event to GAnalytics.
-		try {
-			if (mApp.isGoogleAnalyticsEnabled()) {
-				mTracker.set(Fields.SESSION_CONTROL, "end");
-				mTracker.send(MapBuilder.createTiming("Jams Service", 
-													  System.currentTimeMillis() - mServiceStartTime, 
-													  "Service duration.", 
-													  "User stopped music playback.")
-						.build());
-			}
+		//try {
+//			if (mApp.isGoogleAnalyticsEnabled()) {
+//				mTracker.set(Fields.SESSION_CONTROL, "end");
+//				mTracker.send(MapBuilder.createTiming("Jams Service",
+//													  System.currentTimeMillis() - mServiceStartTime,
+//													  "Service duration.",
+//													  "User stopped music playback.")
+//						.build());
+//			}
 			
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+//		} catch (Exception e) {
+//			e.printStackTrace();
+//		}
 		
 		//Save the last track's info within the current queue.
 		try {
@@ -3073,7 +3073,7 @@ public class AudioPlaybackService extends Service {
         @Override
         public void onServiceCursorFailed(String exceptionMessage) {
             //We don't have a valid cursor, so stop the service.
-            Log.e("SERVICE CURSOR EXCEPTION", "onServiceCursorFailed(): " + exceptionMessage);
+            //Log.e("SERVICE CURSOR EXCEPTION", "onServiced(): " + exceptionMessage);
             Toast.makeText(mContext, R.string.unable_to_start_playback, Toast.LENGTH_SHORT).show();
             stopSelf();
 

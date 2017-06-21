@@ -35,7 +35,7 @@ import android.webkit.WebView;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
-import com.google.android.gms.common.images.ImageManager;
+//import com.google.android.gms.common.images.ImageManager;
 import com.jams.music.player.AsyncTasks.AsyncGoogleMusicAuthenticationTask;
 import com.jams.music.player.DBHelpers.DBAccessHelper;
 import com.jams.music.player.GMusicHelpers.GMusicClientCalls;
@@ -99,7 +99,7 @@ public class Common extends Application {
 	private boolean mIsGMusicLoggedIn = false;
 
 	//ImageManager for asynchronous image downloading.
-	private ImageManager mImageManager;
+	//private ImageManager mImageManager;
 
 	//ImageLoader/ImageLoaderConfiguration objects for ListViews and GridViews.
 	private ImageLoader mImageLoader;
@@ -829,9 +829,9 @@ public class Common extends Application {
         return mPicasso;
     }
 	
-	public ImageManager getImageManager() {
-		return mImageManager;
-	}
+//	public ImageManager getImageManager() {
+//		return mImageManager;
+//	}
 	
 	public boolean isBuildingLibrary() {
 		return mIsBuildingLibrary;
