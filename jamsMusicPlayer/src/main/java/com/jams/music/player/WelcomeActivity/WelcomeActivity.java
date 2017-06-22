@@ -347,11 +347,11 @@ public class WelcomeActivity extends FragmentActivity {
         		return mMusicFoldersFragment;
         	case 2:
         		return new AlbumArtFragment();
+//        	case 9:
+//        		return new GooglePlayMusicFragment();
         	case 3:
-        		return new GooglePlayMusicFragment();
-        	case 4:
         		return new ReadyToScanFragment();
-        	case 5:
+        	case 4:
         		mBuildingLibraryProgressFragment = new BuildingLibraryProgressFragment();
         		return mBuildingLibraryProgressFragment;
         	default:

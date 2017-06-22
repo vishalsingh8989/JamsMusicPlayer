@@ -52,4 +52,258 @@
         <item>Dark</item> 
     </string-array>
 
+
+
+
+    <string-array name="rainbow">
+        <item>#f44336</item>
+        <item>#d32f2f</item>
+        <item>#C2185B</item>
+        <item>#7B1FA2</item>
+        <item>#512DA8</item>
+        <item>#303F9F</item>
+        <item>#1976D2</item>
+        <item>#0288D1</item>
+        <item>#0097A7</item>
+        <item>#00796B</item>
+        <item>#388E3C</item>
+        <item>#AFB42B</item>
+        <item>#FBC02D</item>
+        <item>#F57C00</item>
+        <item>#E64A19</item>
+        <item>#BF360C</item>
+
+    </string-array>
+
+
+    <string-array name="falcon">
+        <item>#106fff</item>
+        <item>#80e5ff</item>
+        <item>#1048a3</item>
+        <item>#bce5ff</item>
+    </string-array>
+
+    <string-array name="defbubble">
+        <item>#41ffffff</item>
+        <item>#18ffffff</item>
+        <item>#1fffffff</item>
+        <item>#25ffffff</item>
+    </string-array>
+
+    <string-array name="bubble">
+        <item>#fdfdfd</item>
+        <item>#f44336</item>
+        <item>#d32f2f</item>
+        <item>#C2185B</item>
+        <item>#7B1FA2</item>
+        <item>#512DA8</item>
+        <item>#303F9F</item>
+        <item>#1976D2</item>
+        <item>#0288D1</item>
+        <item>#0097A7</item>
+        <item>#00796B</item>
+        <item>#388E3C</item>
+        <item>#AFB42B</item>
+        <item>#FBC02D</item>
+        <item>#F57C00</item>
+        <item>#E64A19</item>
+        <item>#BF360C</item>
+
+    </string-array>
+
+
+
+    <string-array name="Animations">
+        <item>com.github.glomadrian.grav.generator.animation.SideToSideAnimator</item>
+        <item>com.github.glomadrian.grav.generator.animation.ShakeAnimator</item>
+        <item>com.github.glomadrian.grav.generator.animation.BallSizeAnimator</item>
+    </string-array>
+
+    <string-array name="BallWaveAnimations">
+        <item>com.github.glomadrian.grav.generator.animation.SideToSideAnimator</item>
+        <item>com.github.glomadrian.grav.generator.animation.ShakeAnimator</item>
+        <item>com.github.glomadrian.grav.generator.animation.BallSizeAnimator</item>
+    </string-array>
+
+    <string-array name="GravAnimations">
+        <item>com.github.glomadrian.grav.generator.animation.SideToSideAnimator</item>
+        <item>com.github.glomadrian.grav.generator.animation.ShakeAnimator</item>
+    </string-array>
+
+    <string-array name="BubbleAnimations">
+        <item>com.github.glomadrian.grav.generator.animation.SideToSideAnimator</item>
+        <item>com.github.glomadrian.grav.generator.animation.ShakeAnimator</item>
+    </string-array>
+
+
+    <string-array name="FalconAnimations">
+        <item>com.github.glomadrian.grav.generator.animation.SideToSideAnimator</item>
+        <item>com.github.glomadrian.grav.generator.animation.ShakeAnimator</item>
+    </string-array>
+
+    <string-array name="WallaIcon">
+        <item>com.github.glomadrian.grav.generator.animation.ShakeAnimator</item>
+        <item>com.github.glomadrian.grav.generator.animation.AlphaAnimator</item>
+    </string-array>
+
+    <integer-array name="walla_points_percent_points">
+        <item>60</item>
+        <item>36</item>
+
+        <item>81</item>
+        <item>78</item>
+
+        <item>4</item>
+        <item>62</item>
+
+
+
+        <item>57</item>
+        <item>7</item>
+
+        <item>80</item>
+        <item>70</item>
+
+        <item>35</item>
+        <item>62</item>
+
+        <item>83</item>
+        <item>23</item>
+
+        <item>7</item>
+        <item>32</item>
+
+        <item>18</item>
+        <item>74</item>
+
+        <item>83</item>
+        <item>24</item>
+
+        <item>31</item>
+        <item>71</item>
+
+        <item>90</item>
+        <item>47</item>
+
+        <item>64</item>
+        <item>85</item>
+
+        <item>60</item>
+        <item>12</item>
+
+        <item>30</item>
+        <item>63</item>
+
+        <item>81</item>
+        <item>56</item>
+
+
+        <item>45</item>
+        <item>39</item>
+
+        <item>13</item>
+        <item>82</item>
+
+        <item>84</item>
+        <item>78</item>
+
+        <item>59</item>
+        <item>2</item>
+
+        <item>68</item>
+        <item>67</item>
+
+        <item>29</item>
+        <item>17</item>
+
+        <item>22</item>
+        <item>25</item>
+
+
+        <item>58</item>
+        <item>7</item>
+
+        <item>14</item>
+        <item>42</item>
+
+        <item>73</item>
+        <item>14</item>
+
+        <item>37</item>
+        <item>41</item>
+
+
+
+        <item>53</item>
+        <item>22</item>
+
+        <item>21</item>
+        <item>41</item>
+
+        <item>25</item>
+        <item>34</item>
+
+        <item>82</item>
+        <item>30</item>
+
+        <item>29</item>
+        <item>67</item>
+
+        <item>18</item>
+        <item>89</item>
+
+        <item>80</item>
+        <item>42</item>
+
+        <item>17</item>
+        <item>70</item>
+
+        <item>47</item>
+        <item>5</item>
+
+        <item>83</item>
+        <item>26</item>
+
+        <item>48</item>
+        <item>46</item>
+
+        <item>34</item>
+        <item>48</item>
+
+        <item>8</item>
+        <item>34</item>
+
+        <item>49</item>
+        <item>88</item>
+
+        <item>63</item>
+        <item>2</item>
+
+        <item>57</item>
+        <item>21</item>
+
+        <item>61</item>
+        <item>89</item>
+
+        <item>73</item>
+        <item>15</item>
+
+        <item>26</item>
+        <item>74</item>
+
+        <item>39</item>
+        <item>13</item>
+
+        <item>31</item>
+        <item>36</item>
+
+        <item>88</item>
+        <item>59</item>
+
+
+
+
+
+    </integer-array>
+
 </resources>

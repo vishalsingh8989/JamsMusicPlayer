@@ -83,7 +83,9 @@ public class ListViewFragment extends Fragment {
 	
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        mRootView = (ViewGroup) inflater.inflate(R.layout.fragment_list_view, container, false);
+
+
+		mRootView = (ViewGroup) inflater.inflate(R.layout.fragment_list_view, container, false);
         mContext = getActivity().getApplicationContext();
 	    mApp = (Common) mContext;
         mFragment = this;
@@ -100,7 +102,7 @@ public class ListViewFragment extends Fragment {
 	    mSearchLayout = (RelativeLayout) mRootView.findViewById(R.id.search_layout);
 	    mSearchEditText = (EditText) mRootView.findViewById(R.id.search_field);
 	    
-	    mSearchEditText.setTypeface(TypefaceHelper.getTypeface(mContext, "RobotoCondensed-Regular"));
+	    mSearchEditText.setTypeface(TypefaceHelper.getTypeface(mContext, "quigly"));
 	    mSearchEditText.setPaintFlags(mSearchEditText.getPaintFlags() | Paint.ANTI_ALIAS_FLAG | Paint.SUBPIXEL_TEXT_FLAG);
 	    mSearchEditText.setTextColor(UIElementsHelper.getThemeBasedTextColor(mContext));
 	    mSearchEditText.setFocusable(true);
@@ -112,11 +114,11 @@ public class ListViewFragment extends Fragment {
         mListView.setVerticalScrollBarEnabled(false);
 
         //Apply the ListViews' dividers.
-        if (mApp.getCurrentTheme()==Common.DARK_THEME) {
-            mListView.setDivider(mContext.getResources().getDrawable(R.drawable.icon_list_divider));
-        } else {
-            mListView.setDivider(mContext.getResources().getDrawable(R.drawable.icon_list_divider_light));
-        }
+//        if (mApp.getCurrentTheme()==Common.DARK_THEME) {
+//            mListView.setDivider(mContext.getResources().getDrawable(R.drawable.icon_list_divider));
+//        } else {
+//            mListView.setDivider(mContext.getResources().getDrawable(R.drawable.icon_list_divider_light));
+//        }
 
 		mListView.setDividerHeight(1);
         
@@ -144,7 +146,7 @@ public class ListViewFragment extends Fragment {
 
         //Set the empty views.
         mEmptyTextView = (TextView) mRootView.findViewById(R.id.empty_view_text);
-	    mEmptyTextView.setTypeface(TypefaceHelper.getTypeface(mContext, "Roboto-Light"));
+	    mEmptyTextView.setTypeface(TypefaceHelper.getTypeface(mContext, "quigly"));
 	    mEmptyTextView.setPaintFlags(mEmptyTextView.getPaintFlags() | Paint.ANTI_ALIAS_FLAG | Paint.SUBPIXEL_TEXT_FLAG);
         
         //Create a set of options to optimize the bitmap memory usage.

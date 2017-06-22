@@ -61,8 +61,8 @@ public class QueueDrawerAdapter extends ArrayAdapter<Integer> {
 
             holder.songTitleText.setTextColor(UIElementsHelper.getThemeBasedTextColor(mContext));
             holder.artistText.setTextColor(UIElementsHelper.getSmallTextColor(mContext));
-            holder.songTitleText.setTypeface(TypefaceHelper.getTypeface(mContext, "Roboto-Regular"));
-            holder.artistText.setTypeface(TypefaceHelper.getTypeface(mContext, "Roboto-Regular"));
+            holder.songTitleText.setTypeface(TypefaceHelper.getTypeface(mContext, "Anydore"));
+            holder.artistText.setTypeface(TypefaceHelper.getTypeface(mContext, "Anydore"));
 
             convertView.setTag(holder);
         } else {

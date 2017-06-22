@@ -102,9 +102,9 @@ public class QueueDrawerFragment extends Fragment {
         mPlayPauseBackground.setBackgroundResource(UIElementsHelper.getShadowedCircle(mContext));
         mPlayPauseButton.setId(R.drawable.pause_light);
 
-        mTitleText.setTypeface(TypefaceHelper.getTypeface(mContext, "Roboto-Regular"));
-        mSubText.setTypeface(TypefaceHelper.getTypeface(mContext, "Roboto-Regular"));
-        mEmptyInfoText.setTypeface(TypefaceHelper.getTypeface(getActivity(), "Roboto-Regular"));
+        mTitleText.setTypeface(TypefaceHelper.getTypeface(mContext, "Anydore"));
+        mSubText.setTypeface(TypefaceHelper.getTypeface(mContext, "Anydore"));
+        mEmptyInfoText.setTypeface(TypefaceHelper.getTypeface(getActivity(), "Anydore"));
 
         //Set the click listeners.
         mMiniPlayerLayout.setOnClickListener(mOnClickMiniPlayer);
@@ -208,11 +208,11 @@ public class QueueDrawerFragment extends Fragment {
             //Reset the initialization flag.
             mInitListViewParams = false;
 
-            if (mApp.getCurrentTheme()==Common.DARK_THEME) {
-                mListView.setDivider(mContext.getResources().getDrawable(R.drawable.list_divider));
-            } else {
-                mListView.setDivider(mContext.getResources().getDrawable(R.drawable.list_divider_light));
-            }
+//            if (mApp.getCurrentTheme()==Common.DARK_THEME) {
+//                mListView.setDivider(mContext.getResources().getDrawable(R.drawable.list_divider));
+//            } else {
+//                mListView.setDivider(mContext.getResources().getDrawable(R.drawable.list_divider_light));
+//            }
 
             mListView.setDividerHeight(1);
             mListView.setFastScrollEnabled(true);

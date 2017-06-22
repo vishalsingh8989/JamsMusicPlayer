@@ -60,4 +60,25 @@
     <!-- A dark Holo shade of orange -->
     <color name="holo_orange_dark">#ffff8800</color>
 
+
+
+    <color name="shinny">#AA181818</color>
+    <color name="b">#f44336</color>
+    <color name="c">#d32f2f</color>
+    <color name="d">#C2185B</color>
+    <color name="e">#7B1FA2</color>
+    <color name="f">#512DA8</color>
+    <color name="g">#303F9F</color>
+    <color name="h">#1976D2</color>
+    <color name="i">#0288D1</color>
+    <color name="j">#0097A7</color>
+    <color name="k">#00796B</color>
+    <color name="l">#388E3C</color>
+    <color name="m">#AFB42B</color>
+    <color name="n">#FBC02D</color>
+    <color name="o">#F57C00</color>
+    <color name="p">#E64A19</color>
+    <color name="q">#BF360C</color>
+    <color name="r">#6D4C41</color>
+    <color name="s">#212121</color>
 </resources>

@@ -37,6 +37,8 @@
     
 	    <ListView
 	        android:id="@+id/generalListView"
+			android:divider="@drawable/intro_list_divider"
+			android:dividerHeight="3dp"
 	        android:layout_width="match_parent"
 	        android:layout_height="wrap_content"
 	        android:layout_centerHorizontal="true"

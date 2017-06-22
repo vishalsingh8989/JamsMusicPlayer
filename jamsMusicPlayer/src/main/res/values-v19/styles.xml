@@ -165,6 +165,8 @@
         <item name="android:windowTranslucentNavigation">true</item>
         <!-- Light.DarkActionBar specific -->
         <item name="android:actionBarWidgetTheme">@style/Theme.Appthemelight.Widget</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowNoTitle">true</item>
 
     </style>
 

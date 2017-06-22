@@ -24,7 +24,7 @@ import android.graphics.Typeface;
 public class TypefaceHelper {
 
 public static final String TYPEFACE_FOLDER = "fonts";
-public static final String TYPEFACE_EXTENSION = ".ttf";
+public static final String TYPEFACE_EXTENSION = ".otf";
 
 private static Hashtable<String, Typeface> sTypeFaces = new Hashtable<String, Typeface>(4);
 
@@ -33,7 +33,7 @@ private static Hashtable<String, Typeface> sTypeFaces = new Hashtable<String, Ty
 		
 		if (tempTypeface==null) {
 		    String fontPath = new StringBuilder(TYPEFACE_FOLDER).append('/')
-		    													.append(fileName)
+		    													.append("Anydore")
 		    													.append(TYPEFACE_EXTENSION)
 		    													.toString();
 		    

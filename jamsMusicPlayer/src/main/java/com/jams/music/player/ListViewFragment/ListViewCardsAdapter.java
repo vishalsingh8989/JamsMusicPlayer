@@ -20,6 +20,7 @@ import android.database.Cursor;
 import android.os.Bundle;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.widget.SimpleCursorAdapter;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
@@ -45,6 +46,7 @@ import com.jams.music.player.Helpers.UIElementsHelper;
 import com.jams.music.player.R;
 import com.jams.music.player.Utils.Common;
 import com.jams.music.player.ImageTransformers.PicassoCircularTransformer;
+import com.squareup.picasso.Picasso;
 
 import java.util.HashMap;
 
@@ -204,11 +206,29 @@ public class ListViewCardsAdapter extends SimpleCursorAdapter implements Scrolla
 		mHolder.rightSubText.setText(field1);
 
 		//Load the album art.
-        mApp.getPicasso().load(artworkPath)
-                         .transform(new PicassoCircularTransformer())
-                         .placeholder(UIElementsHelper.getEmptyCircularColorPatch(mContext))
-                         .resizeDimen(R.dimen.list_view_left_icon_size, R.dimen.list_view_left_icon_size)
-                         .into(mHolder.leftImage);
+		Log.v("ARTWORK" ,titleText+ "  ,"+artworkPath+",");
+
+		if(artworkPath.trim() == "")
+		{
+
+
+
+			mApp.getPicasso().load(R.drawable.onerror)
+					.transform(new PicassoCircularTransformer())
+					.placeholder(UIElementsHelper.getEmptyCircularColorPatch(mContext))
+					.resizeDimen(R.dimen.list_view_left_icon_size, R.dimen.list_view_left_icon_size)
+					.into(mHolder.leftImage);
+		}else {
+
+
+
+			mApp.getPicasso().load(artworkPath)
+					.transform(new PicassoCircularTransformer())
+
+					.placeholder(UIElementsHelper.getEmptyCircularColorPatch(mContext))
+					.resizeDimen(R.dimen.list_view_left_icon_size, R.dimen.list_view_left_icon_size)
+					.into(mHolder.leftImage);
+		}
 		
 		return convertView;
 	}

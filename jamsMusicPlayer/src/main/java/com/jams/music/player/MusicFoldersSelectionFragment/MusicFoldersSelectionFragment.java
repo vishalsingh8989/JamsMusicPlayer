@@ -143,7 +143,7 @@ public class MusicFoldersSelectionFragment extends Fragment {
 		    mCursor.close();
 		
 		//Get the folder hierarchy of the selected folder.
-        getDir(mRootDir);
+        //getDir(mRootDir);
         
         mFoldersListView.setOnItemClickListener(new OnItemClickListener() {
 
